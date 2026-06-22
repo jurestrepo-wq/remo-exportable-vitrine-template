@@ -14,6 +14,30 @@ const targets = [
     viewport: { width: 1440, height: 1200 }
   },
   {
+    name: "section-suppliers-desktop",
+    url: `${baseUrl}/index.html#/vitrina-exportable`,
+    viewport: { width: 1440, height: 900 },
+    selector: "#suppliers"
+  },
+  {
+    name: "section-validation-desktop",
+    url: `${baseUrl}/index.html#/vitrina-exportable`,
+    viewport: { width: 1440, height: 900 },
+    selector: "#validation"
+  },
+  {
+    name: "section-how-it-works-desktop",
+    url: `${baseUrl}/index.html#/vitrina-exportable`,
+    viewport: { width: 1440, height: 900 },
+    selector: "#how-it-works"
+  },
+  {
+    name: "section-contact-desktop",
+    url: `${baseUrl}/index.html#/vitrina-exportable`,
+    viewport: { width: 1440, height: 900 },
+    selector: "#contact"
+  },
+  {
     name: "detail-desktop",
     url: `${baseUrl}/index.html#/vitrina-exportable/pulpa-mango-congelada-natural`,
     viewport: { width: 1440, height: 1400 }
@@ -48,7 +72,11 @@ for (const target of targets) {
   });
   const page = await context.newPage();
   await page.goto(target.url, { waitUntil: "networkidle" });
-  await page.screenshot({ path: path.join(out, `${target.name}.png`), fullPage: false });
+  if (target.selector) {
+    await page.locator(target.selector).screenshot({ path: path.join(out, `${target.name}.png`) });
+  } else {
+    await page.screenshot({ path: path.join(out, `${target.name}.png`), fullPage: false });
+  }
   await context.close();
 }
 

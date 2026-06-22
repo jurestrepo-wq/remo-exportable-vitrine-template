@@ -102,6 +102,17 @@ function navigateToListing() {
   window.location.hash = "#/vitrina-exportable";
 }
 
+function navigateToSection(sectionId) {
+  state.selectedSlug = null;
+  if (window.location.hash !== "#/vitrina-exportable") {
+    window.history.pushState(null, "", "#/vitrina-exportable");
+  }
+  render();
+  requestAnimationFrame(() => {
+    document.querySelector(`#${sectionId}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
 function navigateToProduct(slug) {
   window.location.hash = `#/vitrina-exportable/${slug}`;
 }
@@ -118,20 +129,24 @@ function render() {
 }
 
 function Header() {
+  const navItems = [
+    ["Products", "products"],
+    ["Suppliers", "suppliers"],
+    ["Validation", "validation"],
+    ["How it works", "how-it-works"],
+    ["Contact", "contact"]
+  ];
   return `
     <header class="site-header">
       <a class="brand-link" href="#/vitrina-exportable" aria-label="Go to Colombia Exportable listing">
         <img src="./assets/brand/remo-logo-oficial-blanco.png" alt="REMO Group" />
       </a>
       <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#/vitrina-exportable">Categories</a>
-        <a href="#how-removalidates">How REMO validates</a>
-        <a href="#suppliers">Suppliers</a>
-        <a href="#contact">Contact</a>
+        ${navItems.map(([label, target]) => `<a href="#/vitrina-exportable" data-nav-target="${target}">${label}</a>`).join("")}
       </nav>
       <div class="header-actions">
         ${LanguageToggle()}
-        <button class="ghost-button">For international buyers</button>
+        <button class="ghost-button" data-nav-target="how-it-works">For international buyers</button>
         <button class="primary-button small" data-modal="sourcing">Request sourcing support</button>
       </div>
     </header>
@@ -147,10 +162,15 @@ function ExportableMarketplacePage() {
           <div class="eyebrow">Colombia Exportable by REMO</div>
           <h1>Curated Colombian suppliers for international buyers.</h1>
           <p>
-            Discover exportable products structured, reviewed and supported by REMO for international sourcing,
-            technical evaluation and COMEX feasibility.
+            For buyers who need more than a catalog: exportable products with supplier context,
+            technical readiness, logistics clarity and REMO support before a commercial conversation moves too fast.
           </p>
           <p class="es-copy">Oferta colombiana validada para compradores internacionales.</p>
+          <div class="buyer-question-row" aria-label="Buyer questions answered by REMO">
+            <span>Can this supplier respond?</span>
+            <span>Are documents ready?</span>
+            <span>Can the operation work?</span>
+          </div>
           <div class="hero-actions">
             <button class="primary-button" data-scroll-products>Explore exportable products</button>
             <button class="secondary-button" data-modal="sourcing">Request sourcing support</button>
@@ -190,19 +210,126 @@ function ExportableMarketplacePage() {
           </div>
         </div>
       </section>
-      <section class="validation-section" id="how-removalidates">
-        <div>
-          <div class="eyebrow">How REMO adapts B2B marketplace patterns</div>
-          <h2>Not a massive open marketplace. A curated international business platform.</h2>
-        </div>
-        <div class="pattern-grid">
-          ${PatternCard("Many suppliers", "Curated suppliers validated by REMO")}
-          ${PatternCard("Contact supplier", "Contact through REMO / buyer validation")}
-          ${PatternCard("MOQ and price", "MOQ, reference price and COMEX disclaimer")}
-          ${PatternCard("RFQ", "Request quote + validate operation")}
-        </div>
-      </section>
+      ${SupplierStorySection(products)}
+      ${ValidationSection()}
+      ${HowItWorksSection()}
+      ${ContactSection()}
     </main>
+  `;
+}
+
+function SupplierStorySection(products) {
+  return `
+    <section class="supplier-section" id="suppliers">
+      <div class="section-heading">
+        <div class="eyebrow">Supplier context</div>
+        <h2>Every product sheet starts with a real business question.</h2>
+        <p>
+          REMO structures each supplier profile so an international buyer can understand not only what is offered,
+          but what has to be true for the supplier to quote, sample and operate responsibly.
+        </p>
+      </div>
+      <div class="supplier-story-grid">
+        ${products.map((product) => SupplierStoryCard(product)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function SupplierStoryCard(product) {
+  const media = primaryMedia(product);
+  const image = isImageAsset(media.url)
+    ? `<img src="${escapeHtml(media.url)}" alt="${escapeHtml(media.alt ?? product.product.nameEn)}" loading="lazy" />`
+    : "";
+  return `
+    <article class="supplier-story-card">
+      <div class="supplier-story-image ${image ? "has-photo" : escapeHtml(media.url ?? "gradient-default")}">
+        ${image}
+      </div>
+      <div>
+        <span class="micro-label">${CATEGORY_LABELS[product.product.category]}</span>
+        <h3>${product.supplier.commercialBrand}</h3>
+        <p>${product.overview.idealInternationalBuyer}</p>
+        <strong>Moment of trust:</strong>
+        <small>${trustMoment(product)}</small>
+      </div>
+    </article>
+  `;
+}
+
+function trustMoment(product) {
+  const moments = {
+    agrofoods: "The buyer can see cold-chain requirements before asking for price.",
+    cosmetics: "The buyer understands that compliance and formulation review come before activation.",
+    manufacturing: "The buyer can evaluate capacity, drawings and repeatability before negotiation."
+  };
+  return moments[product.product.category] ?? "The buyer receives a structured profile before committing time or budget.";
+}
+
+function ValidationSection() {
+  return `
+    <section class="validation-section" id="validation">
+      <div>
+        <div class="eyebrow">REMO validation</div>
+        <h2>Not a massive open marketplace. A curated international business platform.</h2>
+        <p>
+          The role of REMO is to slow down the risky part: validate supplier information, organize documents,
+          clarify logistics and protect both sides before the operation becomes expensive.
+        </p>
+      </div>
+      <div class="pattern-grid">
+        ${PatternCard("Many suppliers", "Curated suppliers reviewed by REMO")}
+        ${PatternCard("Contact supplier", "Contact through REMO / buyer validation")}
+        ${PatternCard("MOQ and price", "MOQ, reference price and COMEX disclaimer")}
+        ${PatternCard("RFQ", "Request quote + validate international operation")}
+      </div>
+    </section>
+  `;
+}
+
+function HowItWorksSection() {
+  const steps = [
+    ["1", "Discover", "Buyer finds a product and checks origin, MOQ, capacity and readiness."],
+    ["2", "Request", "Buyer asks for full sheet, quote, sample or meeting through REMO."],
+    ["3", "Validate", "REMO reviews buyer profile, documents, compliance and logistics feasibility."],
+    ["4", "Operate", "If viable, REMO supports quotation, sample, COMEX validation and next operation."]
+  ];
+  return `
+    <section class="how-section" id="how-it-works">
+      <div class="section-heading compact">
+        <div class="eyebrow">Buyer journey</div>
+        <h2>From interest to a responsible commercial next step.</h2>
+      </div>
+      <div class="journey-grid">
+        ${steps.map(([number, title, body]) => `
+          <article class="journey-card">
+            <span>${number}</span>
+            <h3>${title}</h3>
+            <p>${body}</p>
+          </article>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function ContactSection() {
+  return `
+    <section class="contact-section" id="contact">
+      <div>
+        <div class="eyebrow">Work with REMO</div>
+        <h2>Tell us what you need to buy, validate or source from Colombia.</h2>
+        <p>
+          A REMO team member reviews the request before sharing sensitive supplier information.
+          That is how the vitrine protects trust on both sides of the transaction.
+        </p>
+      </div>
+      <div class="contact-actions-card">
+        <strong>Best next step for buyers</strong>
+        <p>Share destination country, expected volume, channel and technical requirements.</p>
+        <button class="primary-button" data-modal="sourcing">Request sourcing support</button>
+      </div>
+    </section>
   `;
 }
 
@@ -318,6 +445,7 @@ function ProductCard(product) {
         <h3>${product.product.nameEn}</h3>
         <p class="spanish-name">${product.product.nameEs}</p>
         <div class="origin-line">${product.product.originRegion}, Colombia · ${product.product.supplierType}</div>
+        <p class="buyer-fit"><strong>Best for:</strong> ${product.overview.idealInternationalBuyer}</p>
         <div class="quick-grid compact">
           <span><strong>MOQ</strong>${product.capacity.exportableMoq}</span>
           <span><strong>Monthly capacity</strong>${product.capacity.availableMonthlyExportCapacity}</span>
@@ -393,6 +521,7 @@ function ProductDetailHero(product) {
       <p class="trust-copy">
         REMO validates supplier information, export readiness, logistics feasibility and documentation availability before commercial activation.
       </p>
+      <p class="human-note"><strong>Buyer moment:</strong> ${trustMoment(product)}</p>
       ${QuickFactsPanel([
         ["Origin", `${product.product.originRegion}, Colombia`, "globe"],
         ["MOQ", product.capacity.exportableMoq, "box"],
@@ -892,6 +1021,12 @@ function filteredProducts() {
 }
 
 function bindEvents() {
+  document.querySelectorAll("[data-nav-target]").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      navigateToSection(item.dataset.navTarget);
+    });
+  });
   document.querySelectorAll("[data-view]").forEach((button) => {
     button.addEventListener("click", () => navigateToProduct(button.dataset.view));
   });

@@ -104,7 +104,7 @@ canvas {
 .main-nav {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: clamp(14px, 2vw, 24px);
 }
 
 .main-nav a {
@@ -112,6 +112,10 @@ canvas {
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 700;
+}
+
+.main-nav a:hover {
+  color: var(--white);
 }
 
 .header-actions,
@@ -247,6 +251,23 @@ h3 {
 .es-copy {
   font-weight: 800;
   color: var(--remo-deep) !important;
+}
+
+.buyer-question-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 20px;
+}
+
+.buyer-question-row span {
+  border: 1px solid rgba(94, 160, 171, 0.38);
+  border-radius: 999px;
+  background: rgba(94, 160, 171, 0.1);
+  color: var(--remo-deep);
+  font-size: 0.86rem;
+  font-weight: 800;
+  padding: 8px 11px;
 }
 
 .hero-panel {
@@ -668,13 +689,196 @@ textarea {
   border-color: rgba(192, 96, 37, 0.18);
 }
 
-.validation-section {
+.buyer-fit,
+.human-note {
+  margin: 0;
+  border-left: 3px solid var(--remo-aqua);
+  background: rgba(94, 160, 171, 0.09);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #334155;
+  font-size: 0.88rem;
+}
+
+.buyer-fit strong,
+.human-note strong {
+  color: var(--remo-deep);
+}
+
+.supplier-section,
+.validation-section,
+.how-section,
+.contact-section {
   max-width: var(--max);
-  margin: 20px auto 70px;
+  margin: 20px auto 42px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.supplier-section .section-heading,
+.how-section .section-heading,
+.contact-section .section-heading {
+  display: grid;
+  gap: 8px;
+  max-width: 780px;
+  margin-bottom: 20px;
+}
+
+.supplier-section .section-heading p,
+.how-section .section-heading p,
+.contact-section .section-heading p {
+  max-width: 720px;
+}
+
+.supplier-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.supplier-story-card,
+.journey-card,
+.contact-actions-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 24px rgba(8, 59, 74, 0.05);
+}
+
+.supplier-story-card {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 150px auto;
+}
+
+.supplier-story-card > div:last-child {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+}
+
+.supplier-story-card h3,
+.supplier-story-card p {
+  margin: 0;
+}
+
+.supplier-story-card p,
+.supplier-story-card small,
+.journey-card p,
+.contact-section p {
+  color: #475569;
+}
+
+.supplier-story-card small {
+  line-height: 1.45;
+}
+
+.supplier-story-image {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(8, 59, 74, 0.88), rgba(94, 160, 171, 0.66)),
+    var(--remo-mist);
+}
+
+.supplier-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.micro-label {
+  color: var(--remo-orange);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.validation-section {
+  margin-bottom: 42px;
   padding: 28px;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 24px rgba(8, 59, 74, 0.05);
+}
+
+.validation-section p {
+  color: #475569;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.journey-card {
+  padding: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.journey-card span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--remo-deep);
+  color: var(--white);
+  font-weight: 900;
+}
+
+.journey-card h3,
+.journey-card p {
+  margin: 0;
+}
+
+.contact-section {
+  margin-bottom: 76px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 22px;
+  align-items: stretch;
+  background:
+    linear-gradient(135deg, rgba(8, 59, 74, 0.96), rgba(8, 59, 74, 0.88)),
+    radial-gradient(circle at 90% 10%, rgba(94, 160, 171, 0.28), transparent 34%);
+  border-radius: 10px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  color: var(--white);
+}
+
+.contact-section h2,
+.contact-section .eyebrow {
+  color: var(--white);
+}
+
+.contact-section .eyebrow {
+  color: #f0a26c;
+}
+
+.contact-section p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.contact-actions-card {
+  padding: 22px;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  color: var(--remo-graphite);
+}
+
+.contact-actions-card p {
+  margin: 0;
+  color: #475569;
 }
 
 .pattern-grid {
@@ -1332,8 +1536,14 @@ textarea {
   .detail-grid,
   .detail-body,
   .market-hero,
-  .validation-section {
+  .validation-section,
+  .contact-section {
     grid-template-columns: 1fr;
+  }
+
+  .supplier-story-grid,
+  .journey-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sticky-sidebar,
@@ -1375,7 +1585,10 @@ textarea {
   .marketplace-layout,
   .detail-hero,
   .detail-body,
-  .validation-section {
+  .supplier-section,
+  .validation-section,
+  .how-section,
+  .contact-section {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -1428,6 +1641,8 @@ textarea {
 
   .hero-metrics,
   .product-grid,
+  .supplier-story-grid,
+  .journey-grid,
   .quick-grid,
   .quick-facts,
   .quick-facts.inline,
