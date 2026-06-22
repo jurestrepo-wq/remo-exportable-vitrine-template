@@ -30,7 +30,7 @@
       "authorizedForPublication": false
     },
     "media": [
-      { "type": "image", "url": "gradient-mango", "alt": "Sample mango pulp product visualization", "accessLevel": "public" },
+      { "type": "image", "url": "./assets/products/mango-pulp-b2b.png", "alt": "Sample frozen mango pulp packaging for international buyers", "accessLevel": "public" },
       { "type": "image", "url": "gradient-coldchain", "alt": "Sample frozen chain visualization", "accessLevel": "public" },
       { "type": "document_preview", "url": "locked-technical-sheet", "alt": "Technical sheet locked preview", "accessLevel": "registered_buyer" }
     ],
@@ -206,7 +206,7 @@
       "authorizedForPublication": false
     },
     "media": [
-      { "type": "image", "url": "gradient-cosmetic", "alt": "Sample cosmetic serum visualization", "accessLevel": "public" },
+      { "type": "image", "url": "./assets/products/cosmetic-serum-b2b.png", "alt": "Sample professional Colombian facial serum product line", "accessLevel": "public" },
       { "type": "image", "url": "gradient-lab", "alt": "Sample lab and formulation visualization", "accessLevel": "public" }
     ],
     "overview": {
@@ -379,7 +379,7 @@
       "authorizedForPublication": false
     },
     "media": [
-      { "type": "image", "url": "gradient-metal", "alt": "Sample metal component visualization", "accessLevel": "public" },
+      { "type": "image", "url": "./assets/products/metal-component-b2b.png", "alt": "Sample precision metal components for B2B industrial sourcing", "accessLevel": "public" },
       { "type": "image", "url": "gradient-industrial", "alt": "Sample industrial manufacturing visualization", "accessLevel": "public" }
     ],
     "overview": {

@@ -269,13 +269,47 @@ function FilterSelect(label, key, options) {
   `;
 }
 
+function primaryMedia(product) {
+  return product.media.find((media) => media.type === "image") ?? product.media[0] ?? {};
+}
+
+function isImageAsset(url = "") {
+  return /\.(png|jpe?g|webp|avif|svg)(\?.*)?$/i.test(String(url));
+}
+
+function ProductVisual(product, variant = "card") {
+  const media = primaryMedia(product);
+  const url = media.url ?? "gradient-default";
+  const hasPhoto = isImageAsset(url);
+  const className = variant === "gallery" ? "gallery-main" : "product-image";
+  const label = variant === "gallery" ? product.product.nameEn : CATEGORY_LABELS[product.product.category];
+  return `
+    <div class="${className} ${hasPhoto ? "has-photo" : escapeHtml(url)}">
+      ${hasPhoto ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(media.alt ?? label)}" loading="lazy" />` : ""}
+      <span class="image-label">${escapeHtml(label)}</span>
+    </div>
+  `;
+}
+
+function GalleryThumb(media) {
+  const url = media.url ?? "gradient-default";
+  const hasPhoto = isImageAsset(url);
+  return `
+    <button class="${hasPhoto ? "has-photo" : escapeHtml(url)}" aria-label="${escapeHtml(media.alt ?? media.type)}">
+      ${hasPhoto ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(media.alt ?? media.type)}" loading="lazy" />` : ""}
+      <span>${escapeHtml(formatMediaLabel(media.type))}</span>
+    </button>
+  `;
+}
+
+function formatMediaLabel(value) {
+  return String(value).replace(/_/g, " ");
+}
+
 function ProductCard(product) {
-  const readiness = READINESS_META[product.readiness.status];
   return `
     <article class="product-card">
-      <div class="product-image ${product.media[0]?.url ?? "gradient-default"}">
-        <span class="image-label">${CATEGORY_LABELS[product.product.category]}</span>
-      </div>
+      ${ProductVisual(product)}
       <div class="product-card-body">
         <div class="card-topline">
           ${ReadinessBadge(product.readiness.status)}
@@ -336,11 +370,9 @@ function ProductDetailPage(product) {
 function ProductGallery(product) {
   return `
     <div class="gallery">
-      <div class="gallery-main ${product.media[0]?.url ?? "gradient-default"}">
-        <span>${product.product.nameEn}</span>
-      </div>
+      ${ProductVisual(product, "gallery")}
       <div class="gallery-thumbs">
-        ${product.media.map((media) => `<button class="${media.url}"><span>${media.type}</span></button>`).join("")}
+        ${product.media.map((media) => GalleryThumb(media)).join("")}
       </div>
     </div>
   `;

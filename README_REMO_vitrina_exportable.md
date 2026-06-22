@@ -28,6 +28,7 @@ El prototipo usa:
 - CSS responsive.
 - JavaScript ES modules.
 - Datos mock en JSON.
+- Imágenes sample generadas para visualización del prototipo.
 - Schema TypeScript para futura integración.
 
 No requiere backend ni instalación de dependencias.
@@ -99,6 +100,8 @@ Productos ficticios incluidos:
 3. Componente metálico manufacturado para industria.
 
 Todos los datos son sample/placeholder para visualización. No representan proveedores reales.
+
+Las imágenes ubicadas en `assets/products/` también son visualizaciones sample. Funcionan para presentar el look & feel de la vitrina, pero deben reemplazarse por fotografías autorizadas de productos, empaques, operación o proveedor antes de publicar casos reales.
 
 ## 7. Cómo ejecutar el prototipo
 
