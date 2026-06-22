@@ -1,0 +1,524 @@
+[
+  {
+    "id": "sample-mango-pulp-001",
+    "slug": "pulpa-mango-congelada-natural",
+    "remoCode": "REMO-EXP-SAMPLE-001",
+    "status": "under_remo_review",
+    "accessLevel": "public",
+    "lastUpdated": "2026-06-21",
+    "sampleData": true,
+    "responsibleRemoOwner": "Sample REMO owner",
+    "product": {
+      "nameEs": "Pulpa de mango congelada natural",
+      "nameEn": "Natural frozen mango pulp",
+      "category": "agrofoods",
+      "subcategory": "Frozen fruit pulp",
+      "originCity": "Medellín",
+      "originRegion": "Antioquia",
+      "originCountry": "Colombia",
+      "supplierType": "Food processor"
+    },
+    "supplier": {
+      "companyName": "Proveedor Colombiano Sample A",
+      "commercialBrand": "Marca Sample Mango",
+      "location": "Antioquia, Colombia",
+      "sector": "Agrofoods",
+      "yearFounded": "Sample",
+      "companySize": "Small / medium processor",
+      "impactStory": "Sample placeholder: supplier with rural sourcing and frozen fruit processing capability.",
+      "publicContactPolicy": "through_remo",
+      "authorizedForPublication": false
+    },
+    "media": [
+      { "type": "image", "url": "gradient-mango", "alt": "Sample mango pulp product visualization", "accessLevel": "public" },
+      { "type": "image", "url": "gradient-coldchain", "alt": "Sample frozen chain visualization", "accessLevel": "public" },
+      { "type": "document_preview", "url": "locked-technical-sheet", "alt": "Technical sheet locked preview", "accessLevel": "registered_buyer" }
+    ],
+    "overview": {
+      "shortDescription": "Natural frozen mango pulp structured for food service, industrial beverage and private label channels.",
+      "extendedDescription": "This sample Colombian product has been structured by REMO to support international buyer evaluation, technical review and COMEX feasibility. Data is illustrative for template visualization.",
+      "uses": ["Smoothies", "Juices", "Desserts", "Food service preparations", "Industrial beverage base"],
+      "applications": ["Food service", "HoReCa", "Industrial ingredients", "Private label frozen fruit"],
+      "differentiators": ["Natural fruit profile", "Frozen chain", "Private label available", "Food service format"],
+      "idealInternationalBuyer": "Distributor, food service operator or importer looking for Colombian tropical fruit inputs.",
+      "recommendedChannels": ["distributor", "food_service", "industrial"]
+    },
+    "technicalSpecs": {
+      "composition": "Sample: mango pulp, no final formulation disclosed publicly.",
+      "physicalCharacteristics": ["Frozen pulp", "Smooth texture", "Natural mango color"],
+      "chemicalCharacteristics": ["Brix and acidity under technical validation"],
+      "microbiologicalCharacteristics": ["Requires batch certificate of analysis"],
+      "shelfLife": "Sample: 12 months frozen",
+      "conservation": "Frozen storage required",
+      "warnings": ["Cold chain must be maintained", "Market-specific labeling validation required"],
+      "applicableStandards": ["Food safety requirements must be validated by destination market"],
+      "certifications": ["Under review"],
+      "sanitaryRegistration": "Available under qualified buyer access",
+      "traceability": "Lot-based traceability under review"
+    },
+    "packaging": {
+      "presentations": ["1 kg pouch", "5 kg bag", "20 kg food service pail"],
+      "primaryPackaging": "Food-grade pouch or pail",
+      "secondaryPackaging": "Corrugated box",
+      "tertiaryPackaging": "Palletized frozen cargo",
+      "unitsPerBox": "Sample by presentation",
+      "netWeightPerUnit": "1 kg / 5 kg / 20 kg",
+      "grossWeightPerBox": "Under validation",
+      "boxDimensions": "Under validation",
+      "boxesPerPallet": "Under validation",
+      "unitsPerPallet": "Under validation",
+      "palletType": "Standard export pallet",
+      "privateLabelAvailable": true,
+      "customLabeling": true,
+      "labelLanguages": ["Spanish", "English"],
+      "barcode": "Available under request"
+    },
+    "capacity": {
+      "installedMonthlyCapacity": "Sample: 18 tons / month",
+      "availableMonthlyExportCapacity": "Sample: 6 tons / month",
+      "productionLeadTime": "15-20 business days",
+      "orderPreparationTime": "7-10 business days after confirmation",
+      "productiveMoq": "1 pallet",
+      "exportableMoq": "1 pallet",
+      "recommendedFirstOrderVolume": "1-2 pallets",
+      "replenishmentFrequency": "Monthly",
+      "seasonalAvailability": "Subject to harvest windows",
+      "productionRestrictions": "Cold chain capacity and fruit availability",
+      "scalability": "Can scale with forecasted orders",
+      "capacityAvailablePercent": 62
+    },
+    "commercialTerms": {
+      "referencePrice": "Indicative only",
+      "currency": "USD",
+      "priceVisibilityLevel": "registered_buyer",
+      "priceValidity": "Subject to volume and frozen logistics quote",
+      "minimumTrm": "Not public",
+      "volumeScenarios": ["Sample", "Pallet", "Consolidated frozen shipment", "Recurring order"],
+      "suggestedPaymentTerms": "Advance / negotiated after buyer validation",
+      "estimatedDeliveryTime": "Subject to destination and cold chain availability",
+      "volumeDiscounts": "Available under quotation",
+      "exclusivity": "Not offered in public teaser",
+      "authorizedDistribution": "To be defined by market",
+      "recommendedChannels": ["food_service", "industrial", "distributor"]
+    },
+    "tradeCompliance": {
+      "suggestedHsCode": "To be validated",
+      "tariffDescription": "Frozen fruit pulp - market validation required",
+      "possibleIncoterms": ["EXW", "FOB", "CFR", "CIF"],
+      "certificateOfOrigin": "under_review",
+      "tradeAgreements": ["Destination-specific validation required"],
+      "availableDocuments": ["Commercial catalog", "Product photos", "Preliminary technical sheet"],
+      "pendingDocuments": ["Market-specific label", "COA by batch", "Formal HS validation"],
+      "previousExportExperience": "Sample placeholder",
+      "prioritizedMarkets": ["United States", "Caribbean", "Central America"],
+      "knownRestrictions": ["Cold chain viability", "Food import requirements"]
+    },
+    "logistics": {
+      "cargoType": "frozen",
+      "temperatureCondition": "frozen",
+      "requiredTemperature": "-18°C",
+      "storageRequirements": "Frozen warehouse and reefer transport",
+      "netGrossWeight": "Depends on presentation",
+      "volumetricWeight": "Under validation",
+      "unitDimensions": "Under validation",
+      "boxDimensions": "Under validation",
+      "palletDimensions": "Standard export pallet",
+      "estimated20ContainerCapacity": "Under validation",
+      "estimated40ContainerCapacity": "Under validation",
+      "logisticsRisks": ["Cold chain breach", "Port reefer availability", "Destination import requirements"],
+      "recommendedInsurance": "Cargo insurance recommended",
+      "suggestedPortOrAirport": "Cartagena / Barranquilla / air cargo under validation",
+      "suggestedTransportMode": "Reefer ocean or air for samples"
+    },
+    "suggestedMarkets": [
+      { "countryOrRegion": "United States", "channel": "food_service", "whyItFits": "Tropical fruit demand and food service applications.", "keyBarrier": "FDA and labeling validation.", "nextStep": "Validate importer requirements and frozen landed cost." },
+      { "countryOrRegion": "Caribbean", "channel": "distributor", "whyItFits": "Regional demand for tropical fruit inputs.", "keyBarrier": "Frozen chain continuity.", "nextStep": "Quote consolidated shipment." },
+      { "countryOrRegion": "Central America", "channel": "industrial", "whyItFits": "Ingredient use in beverages and desserts.", "keyBarrier": "Volume and payment terms.", "nextStep": "Identify industrial buyer shortlist." }
+    ],
+    "readiness": {
+      "status": "under_preparation",
+      "publicLabel": "Validated sample / under preparation",
+      "internalScore": 44,
+      "maxScore": 60,
+      "lastUpdated": "2026-06-21",
+      "nextValidationStep": "Complete logistics costing and destination compliance review",
+      "dimensions": {
+        "productDefined": 5,
+        "productionCapacity": 4,
+        "documentation": 3,
+        "technicalSheet": 4,
+        "exportablePackaging": 4,
+        "internationalCosting": 3,
+        "logisticsFeasibility": 3,
+        "regulatoryCompliance": 3,
+        "potentialMargin": 4,
+        "businessCommitment": 5,
+        "exportExperience": 2,
+        "marketPotential": 4
+      }
+    },
+    "risks": [
+      { "type": "logistics", "level": "medium", "publicSummary": "Frozen logistics must be validated by destination.", "requiredAction": "Confirm reefer route and insurance.", "responsibleParty": "remo", "status": "in_progress" },
+      { "type": "regulatory", "level": "medium", "publicSummary": "Food import requirements may vary by market.", "requiredAction": "Validate label and sanitary requirements.", "responsibleParty": "joint", "status": "open" }
+    ],
+    "documents": [
+      { "name": "Commercial teaser", "status": "available", "accessLevel": "public", "updatedAt": "2026-06-21" },
+      { "name": "Technical sheet", "status": "under_review", "accessLevel": "registered_buyer", "updatedAt": "2026-06-21" },
+      { "name": "Sanitary registration", "status": "available_under_nda", "accessLevel": "qualified_buyer", "updatedAt": "2026-06-21" },
+      { "name": "Proforma invoice", "status": "data_room", "accessLevel": "nda_data_room", "updatedAt": "2026-06-21" }
+    ],
+    "tags": ["Natural product", "Food service", "Frozen chain", "Private label available", "Sample data"],
+    "ctas": [
+      { "label": "Request full sheet", "action": "request_full_sheet", "primary": true },
+      { "label": "Request quotation", "action": "request_quote" },
+      { "label": "Request sample", "action": "request_sample" },
+      { "label": "Schedule meeting", "action": "schedule_meeting" }
+    ]
+  },
+  {
+    "id": "sample-cosmetic-serum-002",
+    "slug": "serum-facial-profesional-colombiano",
+    "remoCode": "REMO-EXP-SAMPLE-002",
+    "status": "under_remo_review",
+    "accessLevel": "public",
+    "lastUpdated": "2026-06-21",
+    "sampleData": true,
+    "responsibleRemoOwner": "Sample REMO owner",
+    "product": {
+      "nameEs": "Serum facial profesional de origen colombiano",
+      "nameEn": "Professional Colombian facial serum",
+      "category": "cosmetics",
+      "subcategory": "Professional skincare",
+      "originCity": "Bogotá",
+      "originRegion": "Cundinamarca",
+      "originCountry": "Colombia",
+      "supplierType": "Cosmetic manufacturer"
+    },
+    "supplier": {
+      "companyName": "Proveedor Colombiano Sample B",
+      "commercialBrand": "Marca Sample Beauty",
+      "location": "Colombia",
+      "sector": "Cosmetics",
+      "yearFounded": "Sample",
+      "companySize": "Specialized manufacturer",
+      "impactStory": "Sample placeholder: professional beauty formulation and private label capability.",
+      "publicContactPolicy": "through_remo",
+      "authorizedForPublication": false
+    },
+    "media": [
+      { "type": "image", "url": "gradient-cosmetic", "alt": "Sample cosmetic serum visualization", "accessLevel": "public" },
+      { "type": "image", "url": "gradient-lab", "alt": "Sample lab and formulation visualization", "accessLevel": "public" }
+    ],
+    "overview": {
+      "shortDescription": "Professional skincare serum prepared for beauty channels, distributors and private label conversations.",
+      "extendedDescription": "Sample product sheet for visualization. REMO structures technical, commercial and compliance information before buyer activation.",
+      "uses": ["Professional facial treatment", "Beauty retail", "Private label line", "Spa and professional channel"],
+      "applications": ["Beauty channel", "Distributor catalog", "Private label", "Professional skincare"],
+      "differentiators": ["Professional format", "Private label available", "Ambient cargo", "Beauty channel fit"],
+      "idealInternationalBuyer": "Beauty distributor, private label buyer or professional skincare importer.",
+      "recommendedChannels": ["distributor", "retail", "ecommerce"]
+    },
+    "technicalSpecs": {
+      "composition": "Formula details available only under qualified buyer access.",
+      "physicalCharacteristics": ["Liquid serum", "Premium cosmetic presentation", "Ambient storage"],
+      "chemicalCharacteristics": ["Formula specification under NDA"],
+      "shelfLife": "Sample: 24 months",
+      "conservation": "Ambient, protected from direct heat and sunlight",
+      "warnings": ["Cosmetic registration must be validated by target market", "Claims must be reviewed before publication"],
+      "applicableStandards": ["Cosmetic regulation by destination market"],
+      "certifications": ["Under technical review"],
+      "sanitaryRegistration": "Restricted",
+      "traceability": "Batch traceability under review"
+    },
+    "packaging": {
+      "presentations": ["30 ml bottle", "50 ml bottle", "Private label kit"],
+      "primaryPackaging": "Glass or PET cosmetic bottle",
+      "secondaryPackaging": "Printed folding carton",
+      "tertiaryPackaging": "Master carton",
+      "unitsPerBox": "48 units",
+      "netWeightPerUnit": "30 ml / 50 ml",
+      "grossWeightPerBox": "Under validation",
+      "boxDimensions": "Under validation",
+      "boxesPerPallet": "Under validation",
+      "unitsPerPallet": "Under validation",
+      "palletType": "Standard export pallet",
+      "privateLabelAvailable": true,
+      "customLabeling": true,
+      "labelLanguages": ["Spanish", "English"],
+      "barcode": "Available under request"
+    },
+    "capacity": {
+      "installedMonthlyCapacity": "Sample: 18,000 units / month",
+      "availableMonthlyExportCapacity": "Sample: 4,000 units / month",
+      "productionLeadTime": "25-35 business days",
+      "orderPreparationTime": "10 business days",
+      "productiveMoq": "500 units",
+      "exportableMoq": "500 units",
+      "recommendedFirstOrderVolume": "500-1,000 units",
+      "replenishmentFrequency": "Monthly or quarterly",
+      "seasonalAvailability": "Year-round",
+      "productionRestrictions": "Formula, claim and registration validation",
+      "scalability": "Can scale with forecast and packaging availability",
+      "capacityAvailablePercent": 46
+    },
+    "commercialTerms": {
+      "referencePrice": "Indicative only",
+      "currency": "USD",
+      "priceVisibilityLevel": "qualified_buyer",
+      "priceValidity": "Subject to packaging, formula and volume",
+      "minimumTrm": "Not public",
+      "volumeScenarios": ["Sample kit", "500 units", "1,000 units", "Recurring order"],
+      "suggestedPaymentTerms": "Advance / milestones for private label",
+      "estimatedDeliveryTime": "Subject to production and compliance",
+      "volumeDiscounts": "Available under quotation",
+      "exclusivity": "Negotiable by market",
+      "authorizedDistribution": "Requires supplier authorization",
+      "recommendedChannels": ["retail", "ecommerce", "distributor"]
+    },
+    "tradeCompliance": {
+      "suggestedHsCode": "To be validated",
+      "tariffDescription": "Cosmetic preparation - market validation required",
+      "possibleIncoterms": ["EXW", "FOB", "CIF", "DAP"],
+      "certificateOfOrigin": "pending",
+      "tradeAgreements": ["Destination-specific validation required"],
+      "availableDocuments": ["Product photos", "Commercial catalog"],
+      "pendingDocuments": ["Claims validation", "Cosmetic registration by market", "Full technical dossier"],
+      "previousExportExperience": "Sample placeholder",
+      "prioritizedMarkets": ["Mexico", "Central America", "Caribbean"],
+      "knownRestrictions": ["Cosmetic claims", "Registration", "Ingredient restrictions"]
+    },
+    "logistics": {
+      "cargoType": "general_cargo",
+      "temperatureCondition": "ambient",
+      "requiredTemperature": "Ambient",
+      "storageRequirements": "Dry storage, avoid high heat",
+      "netGrossWeight": "Under validation",
+      "volumetricWeight": "Under validation",
+      "unitDimensions": "Under validation",
+      "boxDimensions": "Under validation",
+      "palletDimensions": "Standard export pallet",
+      "estimated20ContainerCapacity": "Under validation",
+      "estimated40ContainerCapacity": "Under validation",
+      "logisticsRisks": ["Cosmetic compliance", "Packaging lead time", "Labeling by market"],
+      "recommendedInsurance": "Cargo insurance recommended",
+      "suggestedPortOrAirport": "Bogotá air cargo / Cartagena ocean depending volume",
+      "suggestedTransportMode": "Air for samples, ocean or courier for initial orders"
+    },
+    "suggestedMarkets": [
+      { "countryOrRegion": "Mexico", "channel": "distributor", "whyItFits": "Professional beauty channel and private label opportunity.", "keyBarrier": "Cosmetic registration and claims.", "nextStep": "Validate formula and claims compliance." },
+      { "countryOrRegion": "Central America", "channel": "retail", "whyItFits": "Regional beauty distribution with smaller initial volumes.", "keyBarrier": "Distributor fit and regulatory review.", "nextStep": "Prepare buyer teaser and sample kit." },
+      { "countryOrRegion": "Caribbean", "channel": "ecommerce", "whyItFits": "Potential for niche beauty and professional channel.", "keyBarrier": "Logistics cost by small parcels.", "nextStep": "Quote sample route and retail pack." }
+    ],
+    "readiness": {
+      "status": "under_technical_review",
+      "publicLabel": "Under REMO technical review",
+      "internalScore": 38,
+      "maxScore": 60,
+      "lastUpdated": "2026-06-21",
+      "nextValidationStep": "Complete formula, claims and destination registration review",
+      "dimensions": {
+        "productDefined": 5,
+        "productionCapacity": 4,
+        "documentation": 3,
+        "technicalSheet": 3,
+        "exportablePackaging": 4,
+        "internationalCosting": 2,
+        "logisticsFeasibility": 4,
+        "regulatoryCompliance": 2,
+        "potentialMargin": 3,
+        "businessCommitment": 4,
+        "exportExperience": 1,
+        "marketPotential": 3
+      }
+    },
+    "risks": [
+      { "type": "regulatory", "level": "high", "publicSummary": "Cosmetic requirements must be validated before buyer activation.", "requiredAction": "Review formula, claims and destination rules.", "responsibleParty": "joint", "status": "open" },
+      { "type": "commercial", "level": "medium", "publicSummary": "Private label terms require supplier approval.", "requiredAction": "Define minimum volumes and brand permissions.", "responsibleParty": "supplier", "status": "in_progress" }
+    ],
+    "documents": [
+      { "name": "Commercial catalog", "status": "available", "accessLevel": "public", "updatedAt": "2026-06-21" },
+      { "name": "Technical dossier", "status": "under_review", "accessLevel": "qualified_buyer", "updatedAt": "2026-06-21" },
+      { "name": "Formula details", "status": "available_under_nda", "accessLevel": "nda_data_room", "updatedAt": "2026-06-21" },
+      { "name": "Label artwork", "status": "pending", "accessLevel": "registered_buyer", "updatedAt": "2026-06-21" }
+    ],
+    "tags": ["Professional cosmetics", "Private label available", "Beauty channel", "Ambient cargo", "Sample data"],
+    "ctas": [
+      { "label": "Request full sheet", "action": "request_full_sheet", "primary": true },
+      { "label": "Request quotation", "action": "request_quote" },
+      { "label": "Schedule meeting", "action": "schedule_meeting" }
+    ]
+  },
+  {
+    "id": "sample-metal-component-003",
+    "slug": "componente-metalico-manufacturado-industria",
+    "remoCode": "REMO-EXP-SAMPLE-003",
+    "status": "validated_by_remo",
+    "accessLevel": "public",
+    "lastUpdated": "2026-06-21",
+    "sampleData": true,
+    "responsibleRemoOwner": "Sample REMO owner",
+    "product": {
+      "nameEs": "Componente metálico manufacturado para industria",
+      "nameEn": "Custom manufactured metal component",
+      "category": "manufacturing",
+      "subcategory": "Industrial component",
+      "originCity": "Itagüí",
+      "originRegion": "Antioquia",
+      "originCountry": "Colombia",
+      "supplierType": "Industrial manufacturer"
+    },
+    "supplier": {
+      "companyName": "Proveedor Colombiano Sample C",
+      "commercialBrand": "Marca Sample Metal",
+      "location": "Antioquia, Colombia",
+      "sector": "Manufacturing",
+      "yearFounded": "Sample",
+      "companySize": "B2B manufacturer",
+      "impactStory": "Sample placeholder: industrial supplier with custom manufacturing capability.",
+      "publicContactPolicy": "through_remo",
+      "authorizedForPublication": false
+    },
+    "media": [
+      { "type": "image", "url": "gradient-metal", "alt": "Sample metal component visualization", "accessLevel": "public" },
+      { "type": "image", "url": "gradient-industrial", "alt": "Sample industrial manufacturing visualization", "accessLevel": "public" }
+    ],
+    "overview": {
+      "shortDescription": "Custom metal component for B2B industrial supply, spare parts and contract manufacturing.",
+      "extendedDescription": "Sample component profile structured by REMO for international sourcing conversations and technical feasibility review.",
+      "uses": ["Industrial assembly", "Replacement part", "Custom manufacturing", "B2B supply"],
+      "applications": ["Industrial input", "Maintenance", "OEM supply", "Distributor catalog"],
+      "differentiators": ["Custom manufacturing", "General cargo", "B2B technical conversation", "Validated by REMO sample"],
+      "idealInternationalBuyer": "Industrial buyer, distributor or sourcing manager looking for Colombian manufacturing capacity.",
+      "recommendedChannels": ["industrial", "distributor"]
+    },
+    "technicalSpecs": {
+      "composition": "Sample: metal alloy specification under buyer request.",
+      "physicalCharacteristics": ["Machined metal component", "Custom dimensions", "Industrial finish"],
+      "chemicalCharacteristics": ["Material certificate under request"],
+      "shelfLife": "Not applicable",
+      "conservation": "Dry storage",
+      "warnings": ["Final drawing and tolerance must be validated", "Material grade must be confirmed before production"],
+      "applicableStandards": ["Buyer-specific technical standard"],
+      "certifications": ["Under request"],
+      "traceability": "Production lot traceability available"
+    },
+    "packaging": {
+      "presentations": ["Unit", "Batch", "Custom kit"],
+      "primaryPackaging": "Protective wrap",
+      "secondaryPackaging": "Corrugated or wood crate according to volume",
+      "tertiaryPackaging": "Palletized general cargo",
+      "unitsPerBox": "According to component size",
+      "netWeightPerUnit": "Under drawing validation",
+      "grossWeightPerBox": "Under quotation",
+      "boxDimensions": "Under quotation",
+      "boxesPerPallet": "Under quotation",
+      "unitsPerPallet": "Under quotation",
+      "palletType": "Standard or custom pallet",
+      "privateLabelAvailable": false,
+      "customLabeling": true,
+      "labelLanguages": ["Spanish", "English"],
+      "barcode": "Not applicable / optional"
+    },
+    "capacity": {
+      "installedMonthlyCapacity": "Sample: 4,000 units / month",
+      "availableMonthlyExportCapacity": "Sample: 1,200 units / month",
+      "productionLeadTime": "20-30 business days",
+      "orderPreparationTime": "5-8 business days",
+      "productiveMoq": "100 units",
+      "exportableMoq": "100 units",
+      "recommendedFirstOrderVolume": "100-300 units",
+      "replenishmentFrequency": "Monthly or quarterly",
+      "seasonalAvailability": "Year-round",
+      "productionRestrictions": "Drawings, material availability and tolerance requirements",
+      "scalability": "Scales with confirmed forecast",
+      "capacityAvailablePercent": 74
+    },
+    "commercialTerms": {
+      "referencePrice": "Indicative only",
+      "currency": "USD",
+      "priceVisibilityLevel": "qualified_buyer",
+      "priceValidity": "Subject to drawing, material, finish and volume",
+      "minimumTrm": "Not public",
+      "volumeScenarios": ["Sample lot", "100 units", "300 units", "Recurring order"],
+      "suggestedPaymentTerms": "Advance for tooling / negotiated production terms",
+      "estimatedDeliveryTime": "Subject to drawing validation and production queue",
+      "volumeDiscounts": "Available under quotation",
+      "exclusivity": "Not public",
+      "authorizedDistribution": "By buyer agreement",
+      "recommendedChannels": ["industrial", "distributor"]
+    },
+    "tradeCompliance": {
+      "suggestedHsCode": "To be validated",
+      "tariffDescription": "Metal component - classification depends on use and material",
+      "possibleIncoterms": ["EXW", "FOB", "CFR", "CIF", "DAP"],
+      "certificateOfOrigin": "available_under_nda",
+      "tradeAgreements": ["Destination-specific validation required"],
+      "availableDocuments": ["Company profile", "Product photos", "Manufacturing capability sheet"],
+      "pendingDocuments": ["Final drawing", "Material certificate", "Formal HS validation"],
+      "previousExportExperience": "Sample placeholder",
+      "prioritizedMarkets": ["United States", "Mexico", "Andean region"],
+      "knownRestrictions": ["HS classification", "Material specification", "Quality tolerance"]
+    },
+    "logistics": {
+      "cargoType": "general_cargo",
+      "temperatureCondition": "ambient",
+      "requiredTemperature": "Ambient",
+      "storageRequirements": "Dry warehouse",
+      "netGrossWeight": "Depends on design",
+      "volumetricWeight": "Under quotation",
+      "unitDimensions": "Under drawing validation",
+      "boxDimensions": "Under quotation",
+      "palletDimensions": "Standard or custom pallet",
+      "estimated20ContainerCapacity": "Under quotation",
+      "estimated40ContainerCapacity": "Under quotation",
+      "logisticsRisks": ["Weight/volume mismatch", "Custom packaging", "Tolerance-sensitive cargo"],
+      "recommendedInsurance": "All-risk cargo insurance recommended",
+      "suggestedPortOrAirport": "Cartagena / Buenaventura / air cargo for samples",
+      "suggestedTransportMode": "Ocean for volume, air/courier for prototypes"
+    },
+    "suggestedMarkets": [
+      { "countryOrRegion": "United States", "channel": "industrial", "whyItFits": "Demand for alternative sourcing and custom manufacturing.", "keyBarrier": "Tolerance and quality validation.", "nextStep": "Share drawings under NDA and quote pilot lot." },
+      { "countryOrRegion": "Mexico", "channel": "industrial", "whyItFits": "Regional manufacturing and spare parts ecosystem.", "keyBarrier": "Material certification and landed cost.", "nextStep": "Validate HS code and logistics route." },
+      { "countryOrRegion": "Andean region", "channel": "distributor", "whyItFits": "Regional proximity for industrial replacement parts.", "keyBarrier": "Distributor agreement.", "nextStep": "Build shortlist of industrial distributors." }
+    ],
+    "readiness": {
+      "status": "validated_by_remo",
+      "publicLabel": "Validated by REMO",
+      "internalScore": 52,
+      "maxScore": 60,
+      "lastUpdated": "2026-06-21",
+      "nextValidationStep": "Validate buyer drawings and destination HS code",
+      "dimensions": {
+        "productDefined": 5,
+        "productionCapacity": 5,
+        "documentation": 4,
+        "technicalSheet": 5,
+        "exportablePackaging": 4,
+        "internationalCosting": 4,
+        "logisticsFeasibility": 5,
+        "regulatoryCompliance": 4,
+        "potentialMargin": 4,
+        "businessCommitment": 5,
+        "exportExperience": 3,
+        "marketPotential": 4
+      }
+    },
+    "risks": [
+      { "type": "quality", "level": "medium", "publicSummary": "Final tolerance and material validation required by buyer.", "requiredAction": "Review drawing and quality standard.", "responsibleParty": "joint", "status": "open" },
+      { "type": "logistics", "level": "low", "publicSummary": "General cargo route is feasible after packaging quote.", "requiredAction": "Confirm weights, dimensions and packaging.", "responsibleParty": "remo", "status": "in_progress" }
+    ],
+    "documents": [
+      { "name": "Capability sheet", "status": "available", "accessLevel": "public", "updatedAt": "2026-06-21" },
+      { "name": "Technical sheet", "status": "available", "accessLevel": "registered_buyer", "updatedAt": "2026-06-21" },
+      { "name": "Material certificate", "status": "available_under_nda", "accessLevel": "qualified_buyer", "updatedAt": "2026-06-21" },
+      { "name": "Formal quotation", "status": "data_room", "accessLevel": "nda_data_room", "updatedAt": "2026-06-21" }
+    ],
+    "tags": ["Industrial input", "Custom manufacturing", "B2B supply", "General cargo", "Sample data"],
+    "ctas": [
+      { "label": "Request full sheet", "action": "request_full_sheet", "primary": true },
+      { "label": "Request quotation", "action": "request_quote" },
+      { "label": "Schedule meeting", "action": "schedule_meeting" },
+      { "label": "Validate operation", "action": "validate_comex" }
+    ]
+  }
+]
